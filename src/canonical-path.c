@@ -11,7 +11,7 @@ extern "C" {
 #endif
 
 #if defined(_WIN32) || defined(_WIN64)
-#define REALPATH(x) _fullpath(NULL, x, PATH_MAX)
+#define REALPATH(x) _fullpath(NULL, x, _MAX_PATH)
 #define STRDUP(x) _strdup(x)
 #else
 #define REALPATH(x) realpath(x, NULL)
