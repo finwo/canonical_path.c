@@ -49,6 +49,8 @@ extern "C" {
 //   On failure, returns NULL.
 ////////////////////////////////////////////////////////////////////////////////
 char *canonical_path(const char *file_path) {
+  if (!file_path) return NULL;
+
   char *canonical_file_path  = NULL;
   unsigned int file_path_len = strlen(file_path);
 
